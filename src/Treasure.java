@@ -13,9 +13,10 @@ import java.util.ArrayList;
 public class Treasure {
     public static int findMaxGold(TreeNode root) {
         // Make sure to include a Base case
-
-
         // There might be multiple base cases to keep in mind
+
+        //Checks to make sure the root has children.
+
 
 
         // Make sure to include a Recursive case too
