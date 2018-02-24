@@ -12,11 +12,19 @@ import java.util.ArrayList;
 
 public class Treasure {
     public static int findMaxGold(TreeNode root) {
-        // Make sure to include a Base case
-        // There might be multiple base cases to keep in mind
+
+        //This variable holds the max gold totally found.
+        int max = 0;
 
         //Checks to make sure the root has children.
+        if (root.getChildren().isEmpty()) {
+            return 0;
+        }
+        else {
 
+
+
+        }
 
 
         // Make sure to include a Recursive case too
@@ -24,7 +32,7 @@ public class Treasure {
 
         // Don't forget to have a return down here too
 
-        return -1;
+        return max;
     }
 
     public static ArrayList<TreeNode> findMaxGoldPath(TreeNode root) {
