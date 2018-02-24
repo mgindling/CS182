@@ -15,23 +15,22 @@ public class Treasure {
 
         //This variable holds the max gold totally found.
         int max = 0;
+        //This variable holds the gold from a certain child.
+        int goldGet = 0;
 
-        //Checks to make sure the root has children.
-        if (root.getChildren().isEmpty()) {
-            return 0;
+        //Copies the children of a certain node so I can do stuff with it.
+        ArrayList<TreeNode> childList = root.getChildren();
+
+        //Gets the number of children the root we've received has.
+        int childs = childList.size();
+
+        //Goes down each child path (that doesn't make sense).
+        for (int c = 0; c < childs; c++) {
+            goldGet = findMaxGold(childList.get(c));
         }
-        else {
 
-
-
-        }
-
-
-        // Make sure to include a Recursive case too
-
-
-        // Don't forget to have a return down here too
-
+        //Adds gold to max and then returns it.
+        max += goldGet;
         return max;
     }
 
