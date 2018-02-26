@@ -24,15 +24,25 @@ public class Treasure {
         //Gets the number of children the root we've received has.
         int childs = childList.size();
 
-        //Goes down each child path (that doesn't make sense).
-        for (int c = 0; c < childs; c++) {
+        //Used to loop recursively and also to set the max gold correctly.
+        int c;
+
+        //Goes down each child path.
+        for (c = 0; c < childs; c++) {
             goldGet = findMaxGold(childList.get(c));
+            if (goldGet > max) {
+                max = goldGet;
+                root.setMaxGold(max);
+            }
         }
 
-        //Adds gold to max and then returns it.
-        max += goldGet;
-        root.setMaxGold(max);
-        return max;
+        if (c > 0) {
+            return max;
+        }
+        else {
+            root.setMaxGold(root.getGold());
+            return root.getGold();
+        }
     }
 
     public static ArrayList<TreeNode> findMaxGoldPath(TreeNode root) {
