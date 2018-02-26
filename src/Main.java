@@ -22,6 +22,6 @@ public class Main {
         TreeNode t = TreeNode.readTreeFromFile("src/Trees/tree1.txt");
         System.out.println(t);
         System.out.println(Treasure.findMaxGold(t));
-        Treasure.findMaxGoldPath(t);
+        System.out.println(Treasure.findMaxGoldPath(t).toString());
     }
 }

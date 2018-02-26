@@ -81,34 +81,8 @@ public class Treasure {
 
         }
 
+        // Returns the correct Array List
+        return returnNodes;
 
-        /* THIS IS A MESS LOL DON'T LOOK PLZ
-        // Starts with the root.
-        System.out.println(root.toString());
-
-        // Make sure to have a loop and not make it recursive
-        TreeNode lookNode = root;
-        while (lookNode.getChildren().size() > 0) {
-
-            int whereGold;
-
-
-            // Look at the current children and find the one with the most gold in it's subtree
-            ArrayList<TreeNode> childs = lookNode.getChildren();
-            for (int i =0; i < childs.size(); i++) {
-
-            }
-
-        }
-
-
-
-        // Print that child
-
-
-        // Update the node to be that child and look at it's children
-        */
-
-        return null;
     }
 }
