@@ -68,6 +68,7 @@ public class Treasure {
             // Iterates through the child array to find the max max gold.
             for (int c = 0; c < childs; c++) {
                 if (childList.get(c).getMaxGold() > max) {
+                    max = childList.get(c).getMaxGold();
                     where = c;
                 }
             }

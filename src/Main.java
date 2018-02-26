@@ -8,6 +8,8 @@
  *
  */
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         // The path to your filename will change based on your structure
@@ -19,9 +21,13 @@ public class Main {
         //      the second number is the amount of Gold on the island, and then  a set of space-separated integers
         //      that are the direct children of that node.  The root of the tree MUST be the first line in the file.
         //      If you are not sure please ask a TA, come to office hours, look at the given test cases.
-        TreeNode t = TreeNode.readTreeFromFile("src/Trees/tree1.txt");
+        TreeNode t = TreeNode.readTreeFromFile("src/Trees/tree5.txt");
         System.out.println(t);
         System.out.println(Treasure.findMaxGold(t));
-        System.out.println(Treasure.findMaxGoldPath(t).toString());
+        ArrayList<TreeNode> print = Treasure.findMaxGoldPath(t);
+        for (int p = 0; p < print.size(); p++) {
+            System.out.print(print.get(p).getNodeId() + " ");
+        }
+        System.out.println();
     }
 }
