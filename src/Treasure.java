@@ -31,25 +31,38 @@ public class Treasure {
 
         //Adds gold to max and then returns it.
         max += goldGet;
+        root.setMaxGold(max);
         return max;
     }
 
     public static ArrayList<TreeNode> findMaxGoldPath(TreeNode root) {
 
-
-        // Start with the root
-
-        // Print out the data for the root
+        /*
+        // Starts with the root--prints out the data.
+        System.out.println(root.toString());
 
         // Make sure to have a loop and not make it recursive
+        TreeNode lookNode = root;
+        while (lookNode.getChildren().size() > 0) {
 
-        // Look at the current children and find the one with the most gold in it's subtree
+            int whereGold;
+
+
+            // Look at the current children and find the one with the most gold in it's subtree
+            ArrayList<TreeNode> childs = lookNode.getChildren();
+            for (int i =0; i < childs.size(); i++) {
+
+            }
+
+        }
+
 
 
         // Print that child
 
 
         // Update the node to be that child and look at it's children
+        */
 
         return null;
     }
