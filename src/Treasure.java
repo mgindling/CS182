@@ -27,7 +27,7 @@ public class Treasure {
         //Used to loop recursively and also to set the max gold correctly.
         int c;
 
-        //Goes down each child path.
+        //Goes down each child path and finds the max gold..
         for (c = 0; c < childs; c++) {
             goldGet = findMaxGold(childList.get(c));
             if (goldGet > max) {
@@ -37,11 +37,11 @@ public class Treasure {
         }
 
         if (c > 0) {
-            return max;
+            return root.getMaxGold() + root.getGold();
         }
         else {
             root.setMaxGold(root.getGold());
-            return root.getGold();
+            return root.getMaxGold();
         }
     }
 
